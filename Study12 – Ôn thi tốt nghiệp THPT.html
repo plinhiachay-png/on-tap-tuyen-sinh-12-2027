@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Study12 – Ôn thi tốt nghiệp THPT</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;800&display=swap">
+<style>
+:root{--bg:#f4f8ff;--card:#fff;--tx:#0f1b3d;--mut:#5b6785;--bd:#dbe5f7;--b:#2563EB;--g:#16A34A;--sh:0 6px 20px rgba(37,99,235,.08);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--card:#131c30;--tx:#eaf0ff;--mut:#9aa8c7;--bd:#25324f;--sh:none;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1220;--card:#131c30;--tx:#eaf0ff;--mut:#9aa8c7;--bd:#25324f;--sh:none;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 15px/1.6 'Be Vietnam Pro',system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:30}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:12px;padding:8px 14px}
+.logo{display:flex;align-items:center;gap:8px;color:var(--tx);text-decoration:none;flex:none}
+.logo svg{width:44px;height:44px}
+.logo b{font-weight:800;font-size:20px;letter-spacing:-.5px}.logo b i{color:var(--g);font-style:normal}
+nav{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+nav a{padding:7px 12px;border-radius:99px;color:var(--mut);text-decoration:none;font-weight:600;white-space:nowrap;font-size:14px}
+nav a.on{background:var(--b);color:#fff}
+button,.btn{font:600 14px 'Be Vietnam Pro',sans-serif;border:0;border-radius:12px;padding:10px 16px;background:var(--b);color:#fff;cursor:pointer;text-decoration:none;display:inline-block}
+button.g{background:var(--g)}button.o{background:transparent;color:var(--tx);border:1.5px solid var(--bd)}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+main{max-width:1000px;margin:0 auto;padding:18px 14px 50px}
+h1{font-size:clamp(28px,6vw,46px);line-height:1.15;letter-spacing:-1px;margin:0 0 10px}h2{font-size:22px;margin:26px 0 12px}h3{margin:0 0 4px;font-size:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:16px;box-shadow:var(--sh)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.hero{display:grid;gap:20px;align-items:center;grid-template-columns:1.2fr .8fr;background:linear-gradient(135deg,#2563EB,#16A34A);color:#fff;border-radius:26px;padding:28px}
+.hero p{opacity:.92;max-width:48ch}.hero .btn,.hero button{background:#fff;color:#1445b8;margin:4px 6px 0 0}
+.sig{width:100%;max-width:320px;justify-self:center}
+.sig .draw{stroke-dasharray:700;stroke-dashoffset:700;animation:d 2.4s .3s ease forwards}
+@keyframes d{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){.sig .draw{animation:none;stroke-dashoffset:0}}
+@media(max-width:700px){.hero{grid-template-columns:1fr;padding:20px}}
+.tag{font-size:12px;padding:2px 9px;border-radius:99px;background:#e6f0ff;color:#1d4ed8;font-weight:600;display:inline-block;margin:2px 3px 0 0}
+.tag.v{background:#fff4d6;color:#8a5a00}.tag.s{background:#dcfce7;color:#166534}
+input,select,textarea{width:100%;padding:10px 12px;border:1.5px solid var(--bd);border-radius:12px;background:var(--card);color:var(--tx);font:inherit;margin:4px 0 10px}
+.opt{display:block;width:100%;text-align:left;background:var(--card);color:var(--tx);border:1.5px solid var(--bd);margin:8px 0}
+.opt.sel{border-color:var(--b);background:#2563EB22}.opt.ok{border-color:var(--g);background:#16A34A28}.opt.no{border-color:#dc2626;background:#dc262622}
+.bar{height:10px;background:var(--bd);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--g)}
+.nums{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.nums button{width:38px;padding:8px 0;background:var(--card);color:var(--tx);border:1.5px solid var(--bd)}
+.nums .done{background:#2563EB33}.nums .fl{border-color:#f59e0b}.nums .cur{background:var(--b);color:#fff}
+.timer{font-size:28px;font-weight:800;color:var(--b);font-variant-numeric:tabular-nums}
+.flip{min-height:220px;display:grid;place-items:center;text-align:center;cursor:pointer;font-size:26px;font-weight:800}
+.flip small{display:block;font-size:15px;font-weight:400;color:var(--mut)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row>*{margin:0}
+.big{font-size:34px;font-weight:800}
+footer{text-align:center;color:var(--mut);padding:24px 14px;border-top:1px solid var(--bd);font-size:13px}
+.chk{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--bd)}.chk input{width:auto;margin:0}.dn{text-decoration:line-through;color:var(--mut)}
+.mas{display:flex;gap:10px;align-items:center;margin:14px 0}.mas svg{width:84px;flex:none;animation:bn 2.4s ease-in-out infinite}@keyframes bn{50%{transform:translateY(-7px)}}.bub{background:var(--card);color:var(--tx);border:1.5px solid var(--bd);border-radius:16px;padding:10px 14px;font-weight:600}@media(prefers-reduced-motion:reduce){.mas svg{animation:none}}details summary{cursor:pointer}details ul{margin:8px 0 0;padding-left:20px;color:var(--mut)}
+</style>
+</head>
+<body>
+<header>
+<a class="logo" href="#home" aria-label="Study12">
+<svg viewBox="0 0 64 64"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#16A34A"/></linearGradient></defs>
+<rect width="64" height="64" rx="18" fill="url(#lg)"/>
+<path d="M10 40c8-4 15-3 22 2 7-5 14-6 22-2v-4c-8-3-15-2-22 3-7-5-14-6-22-3z" fill="#fff" opacity=".95"/>
+<path d="M17 14l8-4v22M37 22c0-7 14-7 14 0 0 7-14 9-14 14h14" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<b>Study<i>12</i></b></a>
+<nav id="nav"></nav>
+<button class="o" id="th" aria-label="Đổi chế độ sáng tối">◐</button>
+</header>
+<main id="app"></main>
+<footer>© Study12 · Liên hệ: <a href="mailto:ontaptuyensinh12@gmail.com" style="color:var(--b)">ontaptuyensinh12@gmail.com</a><br>Nội dung mẫu do Study12 tự biên soạn, chưa phải tài liệu chính thức. Mục lục và lý thuyết Toán 12 đối chiếu từ <a href="https://www.vietjack.com/toan-lop-12/tong-hop-ly-thuyet-toan-lop-12.jsp" target="_blank" rel="noopener" style="color:var(--b)">VietJack</a>.</footer>
+<script>
+const R=[["home","Trang chủ"],["subjects","Môn học"],["exam","Luyện đề"],["flash","Flashcard"],["tools","Công cụ"],["stats","Thống kê"],["contact","Liên hệ"]];
+const ld=(k,d)=>{try{const v=localStorage.getItem("s12_"+k);return v?JSON.parse(v):d}catch(e){return d}};
+const sv=(k,v)=>{try{localStorage.setItem("s12_"+k,JSON.stringify(v))}catch(e){}};
+const $=s=>document.querySelector(s),A=$("#app");
+const SUBJ=[["Toán 12","Kết nối tri thức","Đạo hàm · Nguyên hàm – Tích phân · Tọa độ không gian · Xác suất có điều kiện","SGK"],["Ngữ văn 12","Kết nối tri thức","9 bài lớn · Đọc hiểu · Nghị luận","SGK"],["Tiếng Anh 12","Global Success","10 Unit · Từ vựng · Ngữ pháp","SGK"],["Vật lí 12","Nhiều bộ sách","Vật lí nhiệt · Khí lí tưởng · Từ trường · Hạt nhân","Đối chiếu"],["Hóa học 12","Nhiều bộ sách","Ester – Lipid · Carbohydrate · Polymer · Pin điện","Đối chiếu"],["Sinh học 12","Nhiều bộ sách","Di truyền · Tiến hóa · Sinh thái","Đối chiếu"],["Lịch sử 12","Nhiều bộ sách","Thế giới hiện đại · Việt Nam hiện đại · Đổi mới","Đối chiếu"],["Địa lí 12","Nhiều bộ sách","Tự nhiên · Dân cư · Kinh tế · Atlat","Đối chiếu"],["GD Kinh tế & Pháp luật 12","Nhiều bộ sách","Tăng trưởng · Hội nhập · Quyền và nghĩa vụ","Đối chiếu"],["Tin học 12","Nhiều bộ sách","Mạng · AI · Cơ sở dữ liệu · Lập trình","Đối chiếu"],["Công nghệ 12","Công nghiệp / Nông nghiệp","Hai nhánh tách biệt","Đối chiếu"]];
+const Q0=[
+{c:"Đạo hàm",q:"Đạo hàm của hàm số y = x³ − 3x + 1 là",o:["3x² − 3","3x² + 1","x² − 3","3x − 3"],a:0,e:"(x³)′ = 3x², (3x)′ = 3, hằng số có đạo hàm 0."},
+{c:"Nguyên hàm – Tích phân",q:"Nguyên hàm của f(x) = 2x là",o:["x² + C","2x² + C","x + C","2 + C"],a:0,e:"∫2x dx = x² + C."},
+{c:"Đạo hàm",q:"Giá trị lớn nhất của f(x) = −x² + 4x trên ℝ là",o:["2","4","0","8"],a:1,e:"f′(x) = −2x + 4 = 0 ⇒ x = 2, f(2) = −4 + 8 = 4."},
+{c:"Xác suất",q:"Biết P(AB) = 0,2 và P(B) = 0,5. Khi đó P(A|B) bằng",o:["0,1","0,7","0,4","2,5"],a:2,e:"P(A|B) = P(AB)/P(B) = 0,2/0,5 = 0,4."},
+{c:"Tọa độ không gian",q:"Cho a = (1; 2; 3), b = (2; 0; −1). Tích vô hướng a·b bằng",o:["1","−1","5","0"],a:1,e:"1·2 + 2·0 + 3·(−1) = −1."},
+{c:"Nguyên hàm – Tích phân",q:"Giá trị của ∫₀¹ 3x² dx là",o:["3","0","1","1/3"],a:2,e:"∫3x² dx = x³; thế cận: 1 − 0 = 1."}];
+const Q=Q0.concat([
+{c:"Đạo hàm",q:"Nếu f′(x) > 0 với mọi x thuộc khoảng K thì hàm số y = f(x) trên K là",o:["Đồng biến","Nghịch biến","Không đổi","Có cực đại"],a:0,e:"Điều kiện đủ: f′(x) > 0 trên K thì hàm số đồng biến trên K."},
+{c:"Đạo hàm",q:"Hàm số y = x³ − 3x² + 2 nghịch biến trên khoảng nào?",o:["(0; 2)","(−∞; 0)","(2; +∞)","(−2; 0)"],a:0,e:"y′ = 3x² − 6x = 3x(x − 2) < 0 ⇔ 0 < x < 2."},
+{c:"Đạo hàm",q:"Đồ thị hàm số y = x³ − 3x + 1 có bao nhiêu điểm cực trị?",o:["0","1","2","3"],a:2,e:"y′ = 3x² − 3 = 0 có hai nghiệm x = ±1 (cũng có b² − 3ac = 9 > 0), đổi dấu nên có 2 cực trị."},
+{c:"Đạo hàm",q:"Hàm số y = x⁴ − 2x² + 3 có bao nhiêu điểm cực trị?",o:["1","2","3","4"],a:2,e:"y′ = 4x³ − 4x = 4x(x − 1)(x + 1) có 3 nghiệm đơn phân biệt nên có 3 cực trị."},
+{c:"Đạo hàm",q:"Hàm số y = −x³ + 3x đạt cực đại tại x bằng",o:["−1","0","1","2"],a:2,e:"y′ = −3x² + 3 = 0 ⇒ x = ±1; y″ = −6x, y″(1) = −6 < 0 nên cực đại tại x = 1."},
+{c:"Nguyên hàm – Tích phân",q:"Nguyên hàm của hàm số f(x) = cos x là",o:["sin x + C","−sin x + C","cos x + C","−cos x + C"],a:0,e:"(sin x)′ = cos x nên ∫cos x dx = sin x + C."},
+{c:"Nguyên hàm – Tích phân",q:"Giá trị của ∫₁² (2x + 1) dx là",o:["3","4","5","6"],a:1,e:"Nguyên hàm x² + x; thế cận: (4 + 2) − (1 + 1) = 4."},
+{c:"Tọa độ không gian",q:"Cho A(1; 2; 3), B(3; 2; 1). Tọa độ vectơ AB là",o:["(2; 0; −2)","(4; 4; 4)","(−2; 0; 2)","(2; 4; 4)"],a:0,e:"AB = (3 − 1; 2 − 2; 1 − 3) = (2; 0; −2)."},
+{c:"Xác suất",q:"Cho P(A) = 0,4; P(B|A) = 0,5; P(B|Ā) = 0,2. Khi đó P(B) bằng",o:["0,32","0,7","0,30","0,1"],a:0,e:"Công thức xác suất toàn phần: P(B) = 0,4·0,5 + 0,6·0,2 = 0,2 + 0,12 = 0,32."}
+]);
+const FC=[["sustainable","/səˈsteɪnəbl/","(adj) bền vững","Sustainable energy protects our planet."],["recycle","/ˌriːˈsaɪkl/","(v) tái chế","We recycle paper and plastic."],["renewable","/rɪˈnjuːəbl/","(adj) có thể tái tạo","Solar power is renewable."],["eco-friendly","/ˌiːkəʊ ˈfrendli/","(adj) thân thiện môi trường","She uses eco-friendly bags."],["reduce","/rɪˈdjuːs/","(v) giảm","Reduce your plastic waste."],["carbon footprint","/ˌkɑːbən ˈfʊtprɪnt/","(n) lượng khí thải carbon","Walking cuts your carbon footprint."]];
+let ex=null,tm=null,fi=0,fb=false,pomo=null;
+const pad=n=>String(n).padStart(2,"0");
+const fmt=s=>pad(Math.floor(s/60))+":"+pad(s%60);
+const OWL='<svg viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="62" rx="32" ry="34" fill="#2563EB"/><ellipse cx="50" cy="70" rx="20" ry="22" fill="#e6f0ff"/><circle cx="38" cy="48" r="11" fill="#fff"/><circle cx="62" cy="48" r="11" fill="#fff"/><circle cx="40" cy="49" r="5" fill="#0f1b3d"/><circle cx="60" cy="49" r="5" fill="#0f1b3d"/><circle cx="42" cy="47" r="1.8" fill="#fff"/><circle cx="62" cy="47" r="1.8" fill="#fff"/><path d="M44 57l6 8 6-8z" fill="#f59e0b"/><path d="M14 22l36-14 36 14-36 14z" fill="#0f1b3d"/><path d="M80 24v16" stroke="#f59e0b" stroke-width="3"/><circle cx="80" cy="42" r="3.5" fill="#f59e0b"/><path d="M20 64c-8 6-8 18 0 22M80 64c8 6 8 18 0 22" stroke="#16A34A" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M40 94l-4 6M60 94l4 6" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/></svg>';
+const MSG=["Chào bạn! Mình là Cú Pi. Hôm nay mình cùng ôn một bài nhé?","Mỗi ngày tiến một bước nhỏ, đến ngày thi bạn sẽ đi rất xa.","Sai không đáng sợ. Sai mà không xem lại mới đáng tiếc!","Làm một đề 15 phút thôi, rồi nghỉ uống nước nhé."];
+const MASC=m=>`<div class="mas">${OWL}<div class="bub">${m||MSG[Math.floor(Math.random()*MSG.length)]}</div></div>`;
+const CH=[["Chương 1. Ứng dụng đạo hàm để khảo sát và vẽ đồ thị hàm số",["Bài 1. Tính đơn điệu và cực trị của hàm số","Bài 2. Giá trị lớn nhất và giá trị nhỏ nhất của hàm số","Bài 3. Đường tiệm cận của đồ thị hàm số","Bài 4. Khảo sát sự biến thiên và vẽ đồ thị của hàm số","Bài 5. Ứng dụng đạo hàm để giải quyết một số vấn đề liên quan đến thực tiễn"]],["Chương 2. Vectơ và hệ trục tọa độ trong không gian",["Bài 6. Vectơ trong không gian","Bài 7. Hệ trục toạ độ trong không gian","Bài 8. Biểu thức toạ độ của các phép toán vectơ"]],["Chương 3. Các số đặc trưng đo mức độ phân tán của mẫu số liệu ghép nhóm",["Bài 9. Khoảng biến thiên và khoảng tứ phân vị","Bài 10. Phương sai và độ lệch chuẩn"]],["Chương 4. Nguyên hàm và tích phân",["Bài 11. Nguyên hàm","Bài 12. Tích phân","Bài 13. Ứng dụng hình học của tích phân"]],["Chương 5. Phương pháp tọa độ trong không gian",["Bài 14. Phương trình mặt phẳng","Bài 15. Phương trình đường thẳng trong không gian","Bài 16. Công thức tính góc trong không gian","Bài 17. Phương trình mặt cầu"]],["Chương 6. Xác suất có điều kiện",["Bài 18. Xác suất có điều kiện","Bài 19. Công thức xác suất toàn phần và công thức Bayes"]]];
+function nav(){const h=(location.hash||"#home").slice(1);return R.some(r=>r[0]===h)?h:"home"}
+function route(){const h=nav();$("#nav").innerHTML=R.map(r=>`<a href="#${r[0]}" class="${r[0]===h?"on":""}">${r[1]}</a>`).join("");if(h!=="exam"&&tm&&!ex?.done){}
+ ({home,subjects,exam:examV,flash,tools,stats,contact})[h]();}
+function home(){const d=ld("exam",""),days=d?Math.ceil((new Date(d)-new Date())/864e5):null,st=ld("stats",{exams:[]}),n=st.exams.length;
+A.innerHTML=`<section class="hero"><div><h1>Học đúng trọng tâm.<br>Thi tự tin.</h1><p>Study12 giúp học sinh lớp 12 ôn lí thuyết, luyện đề có đồng hồ, học từ vựng và theo dõi tiến độ trong một nơi.</p><a class="btn" href="#exam">Làm đề thử</a><a class="btn" href="#subjects">Xem môn học</a></div>
+<svg class="sig" viewBox="0 0 320 170" fill="none"><text x="10" y="86" font-family="Be Vietnam Pro,sans-serif" font-weight="800" font-size="64" fill="#fff" letter-spacing="-3">Study12</text>
+<path class="draw" d="M8 128C60 96 90 150 140 118S210 98 250 124c25 16 40-8 62-30" stroke="#fde68a" stroke-width="5" stroke-linecap="round"/><path class="draw" d="M270 100l36-6-10 32" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/><text x="12" y="158" font-family="Be Vietnam Pro" font-size="12" fill="#fff" opacity=".85">Ôn tập · Luyện đề · Chinh phục</text></svg></section>
+${MASC()}<h2>Học tiếp</h2><div class="grid"><div class="card"><h3>Đề Toán 12 – 6 câu</h3><p>Đồng hồ đếm ngược, chấm điểm tự động.</p><a class="btn" href="#exam">Bắt đầu</a></div><div class="card"><h3>Flashcard Unit 3</h3><p>Green living · ${FC.length} từ</p><a class="btn g" href="#flash">Học từ vựng</a></div><div class="card"><h3>Đếm ngược kỳ thi</h3>${days===null?'<p>Chọn ngày thi của bạn.</p><a class="btn o" href="#tools">Đặt ngày</a>':`<div class="big">${Math.max(days,0)} ngày</div><p>đến ngày ${d}</p>`}</div><div class="card"><h3>Tiến độ</h3><div class="big">${n}</div><p>đề đã làm</p></div></div>
+<h2>Môn học</h2><div class="grid">${SUBJ.map(subCard).join("")}</div>`}
+const subCard=s=>`<div class="card"><h3>${s[0]}</h3><span class="tag">${s[1]}</span><span class="tag v">${s[3]==="SGK"?"Bám sát SGK":"Đối chiếu nhiều bộ sách"}</span><p style="color:var(--mut);font-size:13px">${s[2]}</p>${s[0]==="Toán 12"?'<span class="tag s">Đã đối chiếu mục lục · VietJack</span>':'<span class="tag v">Chưa xác minh</span>'}</div>`;
+function subjects(){A.innerHTML=`<h1>Môn học</h1><input id="sq" placeholder="Tìm môn, chương, từ khóa…" aria-label="Tìm kiếm"><select id="bk"><option value="">Tất cả bộ sách</option><option>Kết nối tri thức</option><option>Global Success</option><option>Nhiều bộ sách</option></select><div class="grid" id="sl"></div><h2>Toán 12 · Kết nối tri thức</h2><p style="color:var(--mut);font-size:13px">Mục lục 6 chương, 19 bài, đối chiếu với <a style="color:var(--b)" href="https://www.vietjack.com/toan-lop-12/tong-hop-ly-thuyet-toan-lop-12.jsp" target="_blank" rel="noopener">VietJack</a>. Phần tóm tắt do Study12 viết lại từ kiến thức đó; bạn nên đối chiếu thêm với SGK.</p>${CH.map(c=>`<details class="card" style="margin-bottom:8px"><summary><b>${c[0]}</b></summary><ul>${c[1].map(b=>`<li>${b}${b.startsWith("Bài 1.")?' <span class="tag s">Có tóm tắt</span>':""}</li>`).join("")}</ul></details>`).join("")}<div class="card"><h3>Tóm tắt Bài 1: Tính đơn điệu và cực trị</h3><span class="tag s">Đã đối chiếu VietJack</span><span class="tag v">Chưa đối chiếu SGK in</span><ul style="padding-left:20px"><li>Trên khoảng K: f′(x) &gt; 0 ⇒ hàm số đồng biến; f′(x) &lt; 0 ⇒ nghịch biến; f′(x) = 0 ⇒ hàm số không đổi.</li><li>Nếu f′(x) ≥ 0 và chỉ bằng 0 tại hữu hạn điểm thì hàm số vẫn đồng biến trên K.</li><li>Cực trị: f′ đổi dấu từ + sang − ⇒ cực đại; từ − sang + ⇒ cực tiểu.</li><li>Quy tắc 2: giải f′(x) = 0 được x₀, rồi xét f″(x₀): f″ &lt; 0 ⇒ cực đại, f″ &gt; 0 ⇒ cực tiểu.</li><li>Hàm bậc ba y = ax³ + bx² + cx + d có hai cực trị ⇔ b² − 3ac &gt; 0.</li></ul><a class="btn g" href="#exam">Luyện đề liên quan</a></div><p style="color:var(--mut);font-size:13px">Các môn còn lại sẽ được bổ sung từng bước, mỗi mục đều ghi rõ trạng thái xác minh.</p>`;
+const f=()=>{const q=$("#sq").value.toLowerCase(),b=$("#bk").value;const r=SUBJ.filter(s=>(s.join(" ").toLowerCase().includes(q))&&(!b||s[1].includes(b)));$("#sl").innerHTML=r.map(subCard).join("")||"<p>Không tìm thấy. Thử từ khóa khác.</p>"};$("#sq").oninput=f;$("#bk").onchange=f;f()}
+function examV(){if(!ex){A.innerHTML=`<h1>Luyện đề Toán 12</h1>${MASC("Hít thở sâu, đọc kĩ đề và tự tin nhé. Cú Pi cổ vũ bạn!")}<div class="card"><p>${Q.length} câu · 15 phút · Trắc nghiệm. Đề do Study12 tự biên soạn bám theo lý thuyết Toán 12 (đối chiếu VietJack). Mọi đáp án đã được tính lại, đây không phải đề thi chính thức.</p><button id="go">Bắt đầu làm bài</button></div>`;$("#go").onclick=()=>{ex={i:0,a:Array(Q.length).fill(null),f:{},end:Date.now()+900000,done:false};clearInterval(tm);tm=setInterval(tick,500);examV()};return}
+ if(ex.done)return result();
+ const q=Q[ex.i];A.innerHTML=`<div class="row" style="justify-content:space-between"><div class="timer" id="tmr"></div><button class="g" id="sub">Nộp bài</button></div><div class="nums">${Q.map((_,i)=>`<button data-i="${i}" class="${ex.a[i]!==null?"done":""} ${ex.f[i]?"fl":""} ${i===ex.i?"cur":""}">${i+1}</button>`).join("")}</div>
+<div class="card"><span class="tag">${q.c}</span><span class="tag v">Study12 biên soạn · đáp án đã kiểm tra</span><h3>Câu ${ex.i+1}. ${q.q}</h3>${q.o.map((o,k)=>`<button class="opt ${ex.a[ex.i]===k?"sel":""}" data-k="${k}">${"ABCD"[k]}. ${o}</button>`).join("")}</div>
+<div class="row" style="margin-top:12px"><button class="o" id="pv">‹ Trước</button><button class="o" id="fg">${ex.f[ex.i]?"Bỏ đánh dấu":"Đánh dấu xem lại"}</button><button class="o" id="nx">Sau ›</button></div>`;
+ tick();A.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ex.a[ex.i]=+b.dataset.k;examV()});A.querySelectorAll(".nums button").forEach(b=>b.onclick=()=>{ex.i=+b.dataset.i;examV()});
+ $("#pv").onclick=()=>{ex.i=Math.max(0,ex.i-1);examV()};$("#nx").onclick=()=>{ex.i=Math.min(Q.length-1,ex.i+1);examV()};$("#fg").onclick=()=>{ex.f[ex.i]=!ex.f[ex.i];examV()};
+ $("#sub").onclick=()=>{const un=ex.a.filter(x=>x===null).length;if(confirm(un?`Còn ${un} câu chưa trả lời. Nộp bài?`:"Nộp bài ngay?"))finish()}}
+function tick(){if(!ex||ex.done)return;const s=Math.max(0,Math.round((ex.end-Date.now())/1000)),t=$("#tmr");if(t)t.textContent="⏱ "+fmt(s);if(s<=0)finish()}
+function finish(){if(ex.done)return;clearInterval(tm);ex.done=true;ex.sec=900-Math.max(0,Math.round((ex.end-Date.now())/1000));
+ const ok=ex.a.filter((x,i)=>x===Q[i].a).length,st=ld("stats",{exams:[]}),en=ld("errs",[]);ex.ok=ok;
+ st.exams.push({t:Date.now(),s:+(ok/Q.length*10).toFixed(2),ok,n:Q.length,sec:ex.sec});sv("stats",st);
+ Q.forEach((q,i)=>{if(ex.a[i]!==q.a&&!en.some(e=>e.q===q.q))en.push({q:q.q,c:q.c,ans:q.o[q.a],e:q.e})});sv("errs",en);if(nav()==="exam")examV()}
+function result(){const un=ex.a.filter(x=>x===null).length,sai=Q.length-ex.ok-un,by={};
+ Q.forEach((q,i)=>{by[q.c]=by[q.c]||[0,0];by[q.c][1]++;if(ex.a[i]===q.a)by[q.c][0]++});
+ A.innerHTML=`<h1>Kết quả</h1>${MASC(ex.ok/Q.length>=.8?"Quá đỉnh! Bạn nắm chắc rồi, giữ phong độ nhé.":ex.ok/Q.length>=.5?"Khá tốt! Xem lại các câu sai là tăng điểm ngay.":"Đừng nản. Mỗi câu sai là một bài học, ôn lại rồi thử lần nữa nhé!")}<div class="card"><div class="big">${(ex.ok/Q.length*10).toFixed(2)} / 10</div><p>Đúng ${ex.ok} · Sai ${sai} · Chưa làm ${un} · Thời gian ${fmt(ex.sec)}</p>
+ ${Object.entries(by).map(([k,v])=>`<div>${k}: ${v[0]}/${v[1]}<div class="bar"><i style="width:${v[0]/v[1]*100}%"></i></div></div>`).join("")}
+ <p><b>Gợi ý ôn tập:</b> ${Object.entries(by).filter(([,v])=>v[0]<v[1]).map(([k])=>k).join(", ")||"Bạn làm đúng tất cả. Hãy thử đề khó hơn."}</p></div>
+ <h2>Đáp án và giải thích</h2>${Q.map((q,i)=>`<div class="card" style="margin-bottom:10px"><h3>Câu ${i+1}. ${q.q}</h3>${q.o.map((o,k)=>`<div class="opt ${k===q.a?"ok":ex.a[i]===k?"no":""}" style="padding:8px 12px;border-radius:10px">${"ABCD"[k]}. ${o}</div>`).join("")}<p><b>Lời giải:</b> ${q.e}</p></div>`).join("")}<button id="rt">Làm lại</button>`;$("#rt").onclick=()=>{ex=null;examV()}}
+function flash(){const m=ld("known",{}),c=FC[fi],k=m[c[0]];
+ A.innerHTML=`<h1>Flashcard · Unit 3 Green living</h1>${MASC("Mỗi ngày vài từ, đều tay là giỏi. Lật thẻ để xem nghĩa nhé!")}<p style="color:var(--mut)">Global Success · Study12 tự biên soạn · Chưa xác minh với SGK. Thẻ ${fi+1}/${FC.length} · Đã nhớ ${Object.values(m).filter(Boolean).length}</p>
+ <div class="card flip" id="fl" tabindex="0" role="button">${fb?`<div>${c[1]}<small>${c[2]}</small><small><i>${c[3]}</i></small></div>`:`<div>${c[0]}${k===false?'<small>Cần ôn lại</small>':""}</div>`}</div>
+ <div class="row" style="margin-top:12px"><button class="o" id="p">‹</button><button id="f">Lật thẻ</button><button class="g" id="y">Đã nhớ</button><button class="o" id="n">Chưa nhớ</button><button class="o" id="x">›</button></div>`;
+ const go=d=>{fi=(fi+d+FC.length)%FC.length;fb=false;flash()},mk=v=>{m[c[0]]=v;sv("known",m);go(1)};
+ $("#fl").onclick=$("#f").onclick=()=>{fb=!fb;flash()};$("#p").onclick=()=>go(-1);$("#x").onclick=()=>go(1);$("#y").onclick=()=>mk(true);$("#n").onclick=()=>mk(false)}
+function tools(){const d=ld("exam",""),T=ld("tasks",[]);
+ A.innerHTML=`<h1>Công cụ học tập</h1><div class="grid"><div class="card"><h3>Pomodoro</h3><div class="timer" id="pt">25:00</div><div class="row"><button id="ps">Bắt đầu</button><button class="o" id="pr">Đặt lại</button></div><p style="color:var(--mut)">Tổng đã học: ${ld("pomo",0)} phút</p></div>
+ <div class="card"><h3>Đếm ngược kỳ thi</h3><label>Ngày thi của bạn<input type="date" id="ed" value="${d}"></label><p style="color:var(--mut);font-size:13px">Hãy nhập ngày theo thông báo chính thức.</p></div></div>
+ <h2>Study Planner</h2><div class="card"><div class="row"><input id="tn" placeholder="Nhiệm vụ hôm nay…" style="flex:1"><button id="ta">Thêm</button></div><div id="tl">${T.length?T.map((t,i)=>`<label class="chk"><input type="checkbox" data-i="${i}" ${t.d?"checked":""}><span class="${t.d?"dn":""}">${t.n.replace(/</g,"&lt;")}</span></label>`).join(""):"<p>Chưa có nhiệm vụ. Thêm nhiệm vụ đầu tiên.</p>"}</div></div>`;
+ let left=1500;const pt=$("#pt");clearInterval(pomo);
+ $("#ps").onclick=()=>{clearInterval(pomo);pomo=setInterval(()=>{left--;pt.textContent=fmt(left);if(left<=0){clearInterval(pomo);sv("pomo",ld("pomo",0)+25);tools()}},1000)};
+ $("#pr").onclick=()=>{clearInterval(pomo);left=1500;pt.textContent="25:00"};$("#ed").onchange=e=>{sv("exam",e.target.value)};
+ $("#ta").onclick=()=>{const v=$("#tn").value.trim();if(v){T.push({n:v,d:false});sv("tasks",T);tools()}};
+ A.querySelectorAll(".chk input").forEach(c=>c.onchange=()=>{T[+c.dataset.i].d=c.checked;sv("tasks",T);tools()})}
+function stats(){const s=ld("stats",{exams:[]}).exams,T=ld("tasks",[]),E=ld("errs",[]),avg=s.length?(s.reduce((a,b)=>a+b.s,0)/s.length).toFixed(2):"–";
+ A.innerHTML=`<h1>Thống kê học tập</h1><div class="grid"><div class="card"><div class="big">${s.length}</div>đề đã làm</div><div class="card"><div class="big">${avg}</div>điểm trung bình</div><div class="card"><div class="big">${ld("pomo",0)}</div>phút Pomodoro</div><div class="card"><div class="big">${T.filter(t=>t.d).length}/${T.length}</div>nhiệm vụ xong</div></div>
+ <h2>Điểm các lần làm đề</h2><div class="card">${s.length?s.slice(-10).map(x=>`<div>${new Date(x.t).toLocaleDateString("vi-VN")} · ${x.s}<div class="bar"><i style="width:${x.s*10}%"></i></div></div>`).join(""):"<p>Chưa có dữ liệu. Làm một đề để bắt đầu.</p>"}</div>
+ <h2>Sổ lỗi sai (${E.length})</h2>${E.map(e=>`<div class="card" style="margin-bottom:8px"><span class="tag">${e.c}</span><p>${e.q}</p><b>Đáp án:</b> ${e.ans}<br>${e.e}</div>`).join("")||"<p>Chưa có câu sai.</p>"}<button class="o" id="rs">Xóa dữ liệu</button>`;
+ $("#rs").onclick=()=>{if(confirm("Xóa toàn bộ dữ liệu học tập?")){["stats","errs","tasks","pomo","known","exam"].forEach(k=>{try{localStorage.removeItem("s12_"+k)}catch(e){}});stats()}}}
+function contact(){A.innerHTML=`<h1>Liên hệ</h1><div class="card"><p>Email: <a href="mailto:ontaptuyensinh12@gmail.com" style="color:var(--b)">ontaptuyensinh12@gmail.com</a></p>
+ <label>Họ tên<input id="cn"></label><label>Email của bạn<input id="ce" type="email"></label><label>Chủ đề<input id="cs"></label><label>Nội dung góp ý<textarea id="cm" rows="5"></textarea></label><button id="cg">Mở ứng dụng email để gửi</button><p style="color:var(--mut);font-size:13px">Trang chưa có máy chủ gửi thư, nên nút này soạn sẵn email trong ứng dụng của bạn.</p></div>`;
+ $("#cg").onclick=()=>{const b=`Họ tên: ${$("#cn").value}\nEmail: ${$("#ce").value}\n\n${$("#cm").value}`;location.href="mailto:ontaptuyensinh12@gmail.com?subject="+encodeURIComponent($("#cs").value||"Góp ý Study12")+"&body="+encodeURIComponent(b)}}
+$("#th").onclick=()=>{const r=document.documentElement,d=getComputedStyle(r).colorScheme==="dark";r.dataset.theme=d?"light":"dark"};
+addEventListener("hashchange",()=>{window.scrollTo(0,0);route()});route();
+</script>
+</body>
+</html>
